@@ -1,0 +1,14 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: redisson-test
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 1
+    redisson:
+      config: |
+        singleServerConfig:
+          address: "redis://127.0.0.1:6379"
+        codec: !<org.redisson.codec.JsonJacksonCodec> {}
